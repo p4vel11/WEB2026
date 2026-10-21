@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма студента</title>
+    <link rel="icon" href="cat.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><nav><b>Управление студентами</b><a href="index.html">К списку</a></nav></header>
+<main>
+    <h1 id="title">Добавление студента</h1>
+    <div class="box">
+        <form id="form">
+            <div class="field"><label for="name">ФИО</label><input id="name" type="text" minlength="5" maxlength="120" required placeholder="Иванов Иван Иванович"></div>
+            <div class="field"><label for="group">Группа</label><input id="group" type="text" pattern="[А-Яа-яЁёA-Za-z0-9-]+" title="Буквы, цифры и дефис" required placeholder="P3100"></div>
+            <div class="field"><label for="isu">ИСУ ID</label><input id="isu" type="number" min="1" step="1" required placeholder="123456"></div>
+            <div class="field"><label for="dorm">Номер общежития</label><input id="dorm" type="number" min="1" step="1" required></div>
+            <div class="field"><label for="room">Комната</label><input id="room" type="text" pattern="[0-9А-Яа-яЁёA-Za-z-]+" title="Буквы, цифры и дефис" required></div>
+            <div class="field"><label for="date">Срок заселения (до какой даты)</label><input id="date" type="date" required></div>
+            <div class="field check"><input id="foreign" type="checkbox"><label for="foreign">Иностранный студент</label></div>
+            <div class="field"><label for="notes">Заметки</label><textarea id="notes" placeholder="Дополнительная информация"></textarea></div>
+            <p id="error" class="err"></p>
+            <button type="submit">Сохранить</button> <a href="index.html" class="btn gray">Отмена</a>
+        </form>
+    </div>
+</main>
+<script src="data.js"></script>
+<script src="form.js"></script>
+</body>
+</html>
